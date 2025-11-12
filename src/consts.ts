@@ -4,10 +4,11 @@ import type { Site, Page, Links, Socials, Blog } from "@types";
 export const SITE: Site = {
   TITLE: "Ahmad Rabiu",
   DESCRIPTION:
-    "Welcome to my portfolio, this resource contains details you need to know about me as a Developer and Engineer.",
+    "I build stuff that works. Fast, efficient, creative and simple solution to complex problems.",
   AUTHOR: "Ahmad Rabiu",
 };
 
+// Not Found
 export const NOTFOUND = {
   TITLE: "Dead End",
   DESCRIPTION: "Don't visit! - It's a dangerous place to be.",
@@ -32,7 +33,7 @@ export const BLOG: Blog = {
 // Projects Page
 export const PROJECTS: Page = {
   TITLE: "Projects",
-  DESCRIPTION: "Recent projects I have worked on.",
+  DESCRIPTION: "Recent projects I worked on.",
 };
 
 // Search Page
