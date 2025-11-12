@@ -13,7 +13,7 @@ repoUrl: https://github.com/dd3vahmad/plicense
 Copypasting license content everytime you start a new project is repetitive and boring, since you
 even need to check if there any copyright information you need to change (It's a lot!).
 
-It is a simple, fast and powerful CLI tool for adding open-source licenses to your project.
+pLICENSE is a simple and fast CLI tool for adding open-source licenses to your project.
 
 ## Installation Options
 
@@ -21,6 +21,7 @@ It is a simple, fast and powerful CLI tool for adding open-source licenses to yo
 Grab the latest binary for your OS from [releases](https://github.com/dd3vahmad/plicense/releases).
 
 Extract and move it into your `$PATH`:
+
 ```bash
 
 tar -xzf plicense_linux_x86_64.tar.gz
@@ -84,6 +85,7 @@ plicense remove
 ```
 ### To view project license:
 > run this command only in the root of your project (where the LICENSE file is)
+
 ```bash
 
 plicense view

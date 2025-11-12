@@ -6,7 +6,7 @@ import solidJs from "@astrojs/solid-js";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://theahmad.me",
+  site: "https://www.ahmadrabiu.dev",
   base: "/",
   integrations: [
     mdx(),
