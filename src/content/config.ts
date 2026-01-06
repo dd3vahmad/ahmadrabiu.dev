@@ -4,6 +4,7 @@ const work = defineCollection({
   type: "content",
   schema: z.object({
     brief: z.string(),
+    site: z.string().optional(),
     file: z.string(),
     company: z.string(),
     role: z.string(),

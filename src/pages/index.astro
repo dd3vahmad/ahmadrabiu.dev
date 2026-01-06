@@ -62,7 +62,11 @@ const projects = (await getCollection("projects"))
             <p class="font-semibold text-big mb-4"><span class="text-tiny">$</span> bat {work.data.file}</p>
             <div class="ms-5 space-y-1">
               <p class="text-sm text-grey">{formatWorkDate(work.data.dateStart)} - {formatWorkDate(work.data.dateEnd)}</p>
-              <h1 class="mb-2">{work.data.company}</h1>
+              <a href={work.data.site}>
+                <h1 class={`mb-2 ${work.data.site ? "cursor-pointer hover:underline" : ""}`}>
+                  {work.data.company}
+                </h1>
+              </a>
               <h3 class="text-big">{work.data.role}</h3>
               <p class="text-sm mt-2">{work.data.brief}</p>
             </div>
