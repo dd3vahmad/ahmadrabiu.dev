@@ -1,0 +1,67 @@
+---
+title: "ExpressStart"
+summary: "A CLI tool for scaffolding Express.js projects by interactively selecting dependencies and configuration options."
+date: "Sept 17 2025"
+draft: false
+tags:
+  - Node.js
+  - Express
+  - CLI
+  - Developer Tooling
+repoUrl: https://github.com/dd3vahmad/express-start
+---
+
+Setting up a new Express project often means dealing with repetitive decisions: which middleware to use, how to structure folders, and how to configure dependencies that all solve similar problems in slightly different ways.
+
+**create-exstart** is a CLI tool designed to remove that friction by letting you scaffold a new Express.js project through an interactive setup process.
+
+Instead of cloning a fixed template, you generate a project based on your actual choices.
+
+## Demo
+
+<video
+  src="/exstart-demo.mp4"
+  autoplay
+  loop
+  muted
+  playsinline
+  style="width: 100%; border-radius: 8px;"
+>
+  Your browser does not support the video tag.
+</video>
+
+## Features
+
+- Interactive CLI wizard for project setup
+- Dependency selection during scaffolding
+- Generates a clean and consistent Express project structure
+- Reduces boilerplate and setup time for new APIs
+
+The goal is to make starting an Express project as quick and painless as creating a new Next.js app.
+
+## Installation
+
+```bash
+npm install -g create-exstart
+```
+
+Verify installation:
+
+```bash
+create-exstart --version
+```
+
+## Usage
+
+Create a new Express project by running:
+
+```bash
+npx create-exstart <project-name>
+```
+
+Follow the prompts to select dependencies and configure your project. Once completed, you’re ready to start building immediately.
+
+## Contribution
+
+The project is open to contributions. Improvements, bug fixes, and feature ideas are welcome via issues and merge requests.
+
