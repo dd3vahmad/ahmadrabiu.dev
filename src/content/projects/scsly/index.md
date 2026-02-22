@@ -13,10 +13,10 @@ tags:
   - MongoDB
 demoUrl: https://scsly.vercel.app
 repoUrl: https://github.com/dd3vahmad/scsly
-banner: /scsly.png
+banner: /projects/scsly.png
 ---
 
-![scsly](/scsly.png)
+![scsly](/projects/scsly.png)
 
 ScSly is designed to simplify digital interactions by offering a powerful and intuitive platform for link management and QR code generation. Whether you're a business owner, marketer, or content creator, ScSly provides essential tools to create seamless digital connections.
 

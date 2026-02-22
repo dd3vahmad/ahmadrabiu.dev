@@ -10,10 +10,10 @@ tags:
   - MongoDB
 demoUrl: https://radiantsmileclinic.vercel.app
 repoUrl: https://github.com/dd3vahmad/radiantsmile
-banner: /radiantsmile.png
+banner: /projects/radiantsmile.png
 ---
 
-![radiantsmile](/radiantsmile.png)
+![radiantsmile](/projects/radiantsmile.png)
 
 Radiant Smile Dental Services is a dental care provider dedicated to delivering exceptional oral health solutions with a personal touch. The clinic’s digital presence was crafted to reflect its core values—compassion, quality, and trust—through a user-friendly, modern website experience.
 

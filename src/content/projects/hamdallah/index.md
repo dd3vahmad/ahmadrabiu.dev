@@ -8,12 +8,12 @@ tags:
   - Typescript
   - TailwindCSS
   - shadcn UI
-banner: /hamdallah-portfolio.png
+banner: /projects/hamdallah-portfolio.png
 demoUrl: https://hamdallah-rabiu.vercel.app
 repoUrl: https://www.github.com/dd3vahmad/hamdallah-rabiu
 ---
 
-![Hamdallah's](/hamdallah-portfolio.png)
+![Hamdallah's](/projects/hamdallah-portfolio.png)
 
 Hamdallah Rabiu is a skilled copywriting expert and brand strategist dedicated to crafting compelling narratives that help businesses stand out. With a keen understanding of consumer psychology and persuasive communication, she specializes in creating high-converting copy that drives engagement, boosts brand awareness, and increases sales.
 

@@ -13,10 +13,10 @@ tags:
   - SQL
 demoUrl: https://appacqua.vercel.app
 repoUrl: https://github.com/dd3vahmad/acqua
-banner: /acqua_farms.png
+banner: /projects/acqua_farms.png
 ---
 
-![Acqua farms list page](/acqua_farms.png)
+![Acqua farms list page](/projects/acqua_farms.png)
 
 AcQua is a comprehensive fish farm management and accounting app designed to streamline farm operations and financial tracking. It provides an intuitive platform that helps fish farmers manage daily tasks, monitor operations, and handle accounting, all in one place.
 

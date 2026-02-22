@@ -21,7 +21,7 @@ const blog = defineCollection({
     date: z.coerce.date(),
     tags: z.array(z.string()),
     draft: z.boolean().optional(),
-    banner: z.string().optional(),
+    banner: z.string().default("/blog/default.svg"),
   }),
 });
 
@@ -35,7 +35,7 @@ const projects = defineCollection({
     draft: z.boolean().optional(),
     demoUrl: z.string().optional(),
     repoUrl: z.string().optional(),
-    banner: z.string().optional(),
+    banner: z.string().default("/projects/default.png"),
   }),
 });
 

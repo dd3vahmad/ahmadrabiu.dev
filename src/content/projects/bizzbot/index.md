@@ -12,10 +12,10 @@ tags:
   - Hackathon
 demoUrl: https://bizzbot-eta.vercel.app
 repoUrl: https://github.com/dd3vahmad/bizzbot
-banner: /bizzbot.png
+banner: /projects/bizzbot.png
 ---
 
-![bizzbot](/bizzbot.png)
+![bizzbot](/projects/bizzbot.png)
 
 BizzBot is an **AI-powered chatbot** that helps Nigerian entrepreneurs and business owners navigate trade, business registration, and tax-related questions with accuracy and clarity.
 

@@ -2,7 +2,7 @@
 title: "Gigsflix"
 summary: "A social media engagement platform to gain likes, follows, and more."
 date: "June 3 2024"
-draft: true 
+draft: true
 tags:
   - ReactJs
   - JavaScript
@@ -10,10 +10,10 @@ tags:
   - NodeJs
   - ExpressJs
   - MongoDB
-banner: /gigsflix.png
+banner: /projects/gigsflix.png
 ---
 
-![gameIt](/gigsflix.png)
+![gameIt](/projects/gigsflix.png)
 
 Gigsflix is a social media engagement platform designed to help users boost their online presence. With Gigsflix, users can gain likes, follows, comments, and other forms of engagement across various social media platforms. It’s an easy-to-use tool for individuals and businesses looking to grow their audience and enhance their digital influence.
 

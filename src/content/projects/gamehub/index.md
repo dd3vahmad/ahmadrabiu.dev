@@ -10,10 +10,10 @@ tags:
   - rawgAPI
 demoUrl: https://gamehub-ruddy-beta.vercel.app
 repoUrl: https://github.com/dd3vahmad/gamehub
-banner: /gameIT.png
+banner: /projects/gameIT.png
 ---
 
-![gameIt](/gameIT.png)
+![gameIt](/projects/gameIT.png)
 
 The Gamehub Project is designed to revolutionize how users discover and explore new games. This web app offers an intuitive platform where users can browse, search, and explore a vast collection of games tailored to their preferences and interests.
 

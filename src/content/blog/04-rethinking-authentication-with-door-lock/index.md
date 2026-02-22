@@ -3,6 +3,7 @@ title: "Rethinking Authentication: Why Your Password Should Be Your Key, Not You
 summary: "A fresh take on authentication design that eliminates password storage and empowers users by turning their password into the actual key to their account."
 date: "Jun 08 2025"
 draft: true
+banner: "/blog/door-lock-illustration.png"
 tags:
   - Authentication
   - Security
@@ -46,7 +47,7 @@ Think of a user account like a secure room:
 - **Open Door**: The original timestamp, stored in plain text for comparison.
 - **Back Door**: An admin-only lock, encrypted using a master key (admin's secret).
 
-![Door Lock Illustration](/door-lock-illustration.png)
+![Door Lock Illustration](/blog/door-lock-illustration.png)
 
 > Instead of storing a hash, you store the lock. The password becomes the key.
 

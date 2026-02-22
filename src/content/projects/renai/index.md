@@ -14,10 +14,10 @@ tags:
   - Vercel AI SDK
 demoUrl: https://renai-mocha.vercel.app
 repoUrl: https://github.com/dd3vahmad/chatrenai
-banner: /renAI.png
+banner: /projects/renAI.png
 ---
 
-![renAI homepage](/renAI.png)
+![renAI homepage](/projects/renAI.png)
 
 The renAI Project is designed to transform how users interact with digital documents. This advanced tool enables users to upload PDF files and engage in natural language conversations to extract information, search specific sections, or gain insights quickly and effectively.
 
