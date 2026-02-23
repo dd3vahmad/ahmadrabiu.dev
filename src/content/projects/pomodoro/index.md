@@ -3,6 +3,7 @@ title: "pomodoro"
 summary: "A DOS terminal-based Pomodoro timer implemented as a TSR using x86 assembly and hardware interrupts."
 date: "Sep 14 2025"
 draft: false
+banner: "/blog/pomodoro-timer-cover.png"
 tags:
   - x86 Assembly
   - DOS
@@ -27,12 +28,10 @@ The project focuses on low-level control, timing accuracy, and safe interrupt ha
 
 - **Interrupt-Driven Controls**
   Hooks into:
-
   - **IRQ0 (Timer interrupt)** for precise time tracking
   - **IRQ1 (Keyboard interrupt)** for real-time user input
 
 - **Keyboard Controls**
-
   - `S`, `C`, or `Space`: Start / toggle pause
   - `P`: Pause / unpause
   - `R`: Reset timer to 25:00:000

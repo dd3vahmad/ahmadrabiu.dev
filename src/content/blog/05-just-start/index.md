@@ -2,7 +2,7 @@
 title: "Avoid Perfect Moment, Just Start"
 summary: "Nothing special, just a reminder to just start"
 date: "Oct 11 2025"
-banner: "/blog/just-start-cover"
+banner: "/blog/just-start-cover.png"
 draft: false
 tags:
   - Procastination

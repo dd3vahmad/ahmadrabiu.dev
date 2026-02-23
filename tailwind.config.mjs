@@ -1,4 +1,4 @@
-import defaultTheme from "tailwindcss/defaultTheme"
+import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "sans": ["GeistMono", ...defaultTheme.fontFamily.sans],
+        sans: ["GeistMono", ...defaultTheme.fontFamily.sans],
       },
       typography: {
         DEFAULT: {
@@ -17,10 +17,10 @@ export default {
         },
       },
       rotate: {
-        "45": "45deg",
-        "135": "135deg",
-        "225": "225deg",
-        "315": "315deg",
+        45: "45deg",
+        135: "135deg",
+        225: "225deg",
+        315: "315deg",
       },
       colors: {
         // text: "#f4f4f4",a9b1d6
@@ -33,9 +33,9 @@ export default {
         big: "#7aa2f7",
         bluey: "#89deff",
         grey: "#565f89",
-        greeny: "#9ece6a"
-      }
+        greeny: "#9ece6a",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
-}
+};

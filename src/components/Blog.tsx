@@ -1,34 +1,36 @@
-import type { CollectionEntry } from "astro:content"
-import { createEffect, createSignal, For } from "solid-js"
-import ArrowCard from "@components/ArrowCard"
-import { cn } from "@lib/utils"
+import type { CollectionEntry } from "astro:content";
+import { createEffect, createSignal, For } from "solid-js";
+import ArrowCard from "@components/ArrowCard";
+import { cn } from "@lib/utils";
 
 type Props = {
-  tags: string[]
-  data: CollectionEntry<"blog">[]
-}
+  tags: string[];
+  data: CollectionEntry<"blog">[];
+};
 
 export default function Blog({ data, tags }: Props) {
-  const [filter, setFilter] = createSignal(new Set<string>())
-  const [posts, setPosts] = createSignal<CollectionEntry<"blog">[]>([])
+  const [filter, setFilter] = createSignal(new Set<string>());
+  const [posts, setPosts] = createSignal<CollectionEntry<"blog">[]>([]);
 
   createEffect(() => {
-    setPosts(data.filter((entry) =>
-      Array.from(filter()).every((value) =>
-        entry.data.tags.some((tag: string) =>
-          tag.toLowerCase() === String(value).toLowerCase()
-        )
-      )
-    ))
-  })
+    setPosts(
+      data.filter((entry) =>
+        Array.from(filter()).every((value) =>
+          entry.data.tags.some(
+            (tag: string) => tag.toLowerCase() === String(value).toLowerCase(),
+          ),
+        ),
+      ),
+    );
+  });
 
   function toggleTag(tag: string) {
-    setFilter((prev) =>
-      new Set(prev.has(tag)
-        ? [...prev].filter((t) => t !== tag)
-        : [...prev, tag]
-      )
-    )
+    setFilter(
+      (prev) =>
+        new Set(
+          prev.has(tag) ? [...prev].filter((t) => t !== tag) : [...prev, tag],
+        ),
+    );
   }
 
   return (
@@ -45,11 +47,21 @@ export default function Blog({ data, tags }: Props) {
                     class={cn(
                       "w-full px-2 py-1 rounded",
                       "whitespace-nowrap overflow-hidden overflow-ellipsis",
-                      "flex gap-2 items-center", "bg-big/5", "hover:bg-big/10", filter().has(tag))}
+                      "flex gap-2 items-center",
+                      "bg-big/5",
+                      "hover:bg-big/10",
+                      filter().has(tag),
+                    )}
                   >
                     <svg class={cn("size-5 fill-big/50", filter().has(tag))}>
-                      <use href={`/ui.svg#square`} class={cn(!filter().has(tag) ? "block" : "hidden")} />
-                      <use href={`/ui.svg#square-check`} class={cn(filter().has(tag) ? "block" : "hidden")} />
+                      <use
+                        href={`/ui.svg#square`}
+                        class={cn(!filter().has(tag) ? "block" : "hidden")}
+                      />
+                      <use
+                        href={`/ui.svg#square-check`}
+                        class={cn(filter().has(tag) ? "block" : "hidden")}
+                      />
                     </svg>
                     {tag}
                   </button>
@@ -64,7 +76,7 @@ export default function Blog({ data, tags }: Props) {
           <div class="text-sm uppercase mb-2">
             SHOWING {posts().length} OF {data.length} POSTS
           </div>
-          <ul class="flex flex-col gap-3">
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {posts().map((post) => (
               <li>
                 <ArrowCard entry={post} />
@@ -74,5 +86,5 @@ export default function Blog({ data, tags }: Props) {
         </div>
       </div>
     </div>
-  )
+  );
 }

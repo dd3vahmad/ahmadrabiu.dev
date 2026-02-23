@@ -1,31 +1,30 @@
 ---
-import Container from "@/components/Container.astro"
-import { getCollection } from "astro:content"
-import PageLayout from "@layouts/PageLayout.astro"
-import ArrowCard from "@components/ArrowCard"
-import DownloadCV from "@components/DownloadCV"
-import { SITE, SOCIALS } from "@consts"
-import { formatWorkDate } from "@/pages/work/index.astro"
+import Container from "@/components/Container.astro";
+import { getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import ArrowCard from "@components/ArrowCard";
+import { SITE } from "@consts";
+import { formatWorkDate } from "@/pages/work/index.astro";
 
 const posts = (await getCollection("blog"))
   .filter((post: any) => !post.data.draft)
   .sort((a: any, b: any) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0,3)
+  .slice(0, 4);
 
 const works = (await getCollection("work"))
   .sort((a: any, b: any) => b.data.dateEnd.getTime() - a.data.dateEnd.getTime())
-  .slice(0,3)
+  .slice(0, 4);
 
 const projects = (await getCollection("projects"))
   .filter((project: any) => !project.data.draft)
   .sort((a: any, b: any) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0,4)
+  .slice(0, 3);
 ---
 
 <PageLayout title="Home" description={SITE.DESCRIPTION}>
   <Container size="xl">
     <div class="mt-28">
-      <h1 class="text-3xl font-bold text-big mb-1">Hello, World</h1>
+      <h1 class="text-3xl font-bold text-big mb-1">Hi 👋, Welcome</h1>
       <p class="text-sm">I build stuff (swe. se. w3. ai. nwk.)</p>
     </div>
 
@@ -34,44 +33,63 @@ const projects = (await getCollection("projects"))
       <h2 class="text-xl mb-2 mt-12">About</h2>
 
       <div class="bspace-y-1 p-5 border border-big/20">
-        <p class="font-semibold text-big mb-4"><span class="text-tiny">$</span> cat about.md</p>
+        <p class="font-semibold text-big mb-4">
+          <span class="text-tiny">$</span> cat about.md
+        </p>
         <div class="ms-5 space-y-1">
           <p>My name Ahmad Rabiu.</p>
-          <p>I am an undergraduate at 
+          <p>
+            I am an undergraduate at
             <a href="https://futa.edu.ng" target="_blank">
-              <b class="cursor-pointer hover:opacity-80 underline transition-opacity duration-300 text-tiny">FUTA</b>
-            </a> studying Software Engineering</p>
-          <p>I love to build things. I am motivated by challenging projects with self-guided research and dynamic problem solving.</p>
-          <p>I love reasoning, learning new things and enjoy creative thinking.</p>
+              <b
+                class="cursor-pointer hover:opacity-80 underline transition-opacity duration-300 text-tiny"
+                >FUTA</b
+              >
+            </a> studying Software Engineering
+          </p>
+          <p>
+            I love to build things. I am motivated by challenging projects with
+            self-guided research and dynamic problem solving.
+          </p>
+          <p>
+            I love reasoning, learning new things and enjoy creative thinking.
+          </p>
         </div>
       </div>
     </section>
-    
+
     <!-- Work Section -->
     <section class="space-y-2 mt-12">
       <div class="flex items-center justify-between">
         <h2 class="text-xl">Experience</h2>
-        <a href="/work" class="text-big text-sm hover:underline">
-          View all
-        </a>
+        <a href="/work" class="text-big text-sm hover:underline"> View all </a>
       </div>
 
-      <div class="space-y-5 w-full">
-        {works.map((work) => (
-          <div class="bspace-y-1 p-5 border border-big/20">
-            <p class="font-semibold text-big mb-4"><span class="text-tiny">$</span> bat {work.data.file}</p>
-            <div class="ms-5 space-y-1">
-              <p class="text-sm text-grey">{formatWorkDate(work.data.dateStart)} - {formatWorkDate(work.data.dateEnd)}</p>
-              <a href={work.data.site}>
-                <h1 class={`mb-2 ${work.data.site ? "cursor-pointer hover:underline" : ""}`}>
-                  {work.data.company}
-                </h1>
-              </a>
-              <h3 class="text-big">{work.data.role}</h3>
-              <p class="text-sm mt-2">{work.data.brief}</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
+        {
+          works.map((work) => (
+            <div class="bspace-y-1 p-5 border border-big/20">
+              <p class="font-semibold text-big mb-4">
+                <span class="text-tiny">$</span> bat {work.data.file}
+              </p>
+              <div class="ms-5 space-y-1">
+                <p class="text-sm text-grey">
+                  {formatWorkDate(work.data.dateStart)} -{" "}
+                  {formatWorkDate(work.data.dateEnd)}
+                </p>
+                <a href={work.data.site}>
+                  <h1
+                    class={`mb-2 ${work.data.site ? "cursor-pointer hover:underline" : ""}`}
+                  >
+                    {work.data.company}
+                  </h1>
+                </a>
+                <h3 class="text-big">{work.data.role}</h3>
+                <p class="text-sm mt-2">{work.data.brief}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </section>
 
@@ -84,10 +102,8 @@ const projects = (await getCollection("projects"))
         </a>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-5">
-        {projects.map((project: any) => (
-          <ArrowCard entry={project} pill />
-        ))}
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {projects.map((project: any) => <ArrowCard entry={project} pill />)}
       </div>
     </div>
 
@@ -95,17 +111,19 @@ const projects = (await getCollection("projects"))
     <div class="space-y-2 mt-12">
       <div class="flex items-center justify-between">
         <h2 class="text-xl">Posts</h2>
-        <a href="/blog" class="text-big text-sm hover:underline">
-          View all
-        </a>
+        <a href="/blog" class="text-big text-sm hover:underline"> View all </a>
       </div>
 
-      <ul class="space-y-4">
-        {posts.map((post: any) => (
-          <li>
-            <ArrowCard entry={post} />
-          </li>
-        ))}
+      <ul
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+      >
+        {
+          posts.map((post: any) => (
+            <li>
+              <ArrowCard entry={post} />
+            </li>
+          ))
+        }
       </ul>
     </div>
   </Container>
